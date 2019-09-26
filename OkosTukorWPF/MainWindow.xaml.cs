@@ -181,9 +181,9 @@ namespace OkosTukorWPF
                 infoPanel.txtblock_name.Text = temp.Name;
                 DetectedUser.Content = temp.Name;
                 //WeatherData = temp.Location;
-                //string url = CurrentUrl.Replace("@LOC@", temp.Location);
-                //infoPanel.txtblock_weather.Text = GetFormattedXml_(url);
-                //RSS_Feed(temp.rssFeed);
+                string url = CurrentUrl.Replace("@LOC@", temp.Location);
+                infoPanel.txtblock_weather.Text = GetFormattedXml_(url);
+                RSS_Feed(temp.rssFeed);
                 infoPanel.rec_name.Fill = new SolidColorBrush(temp.Color);
             }
             else
@@ -205,7 +205,7 @@ namespace OkosTukorWPF
             infoPanel = new InfoPanel();
             infoPanel.Show();
 
-            RSS_Feed(users.Find(x => x.Name == "Szabi").rssFeed = textbox_rssfeed.Text);
+            //RSS_Feed(users.Find(x => x.Name == "Szabi").rssFeed = textbox_rssfeed.Text);
 
         }
 
