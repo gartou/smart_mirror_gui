@@ -340,6 +340,10 @@ namespace OkosTukorWPF
                         {
                             infoPanel.txtblock_rss.Text += item.Title.Text + "\n";
                         }
+                        else if (i > 6)
+                        {
+                            break;
+                        }
 
                         i++;
                         //Console.WriteLine("Title: {0}", item.Title.Text);
