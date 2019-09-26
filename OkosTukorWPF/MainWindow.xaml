@@ -1,0 +1,33 @@
+﻿<Window x:Class="OkosTukorWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OkosTukorWPF"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing" Initialized="Window_Initialized">
+
+    <Grid>
+        <Button x:Name="btn_Recog" Content="Start Facial Recognition" HorizontalAlignment="Left" Margin="602,367,0,0" VerticalAlignment="Top" Width="180" Click="Button_Click" Height="42" Background="#FFA80000"/>
+        <Button x:Name="btn_TrainModel" Content="Train Model" HorizontalAlignment="Left" Margin="602,320,0,0" VerticalAlignment="Top" Width="180" Height="42" Background="#FFFFDC00" Click="Btn_TrainModel_Click"/>
+        <Button x:Name="btn_Extract" Content="Extract Embeddings" HorizontalAlignment="Left" Margin="602,273,0,0" VerticalAlignment="Top" Width="180" Height="42" Background="#FFFFDC00" Click="Btn_Extract_Click"/>
+
+        <Label x:Name="DetectedUser" Content="" HorizontalAlignment="Left" Margin="576,61,0,0" VerticalAlignment="Top" Width="152" Height="51"/>
+        <Button x:Name="btn_RegisterU" Content="Register User" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="180" Height="42" Background="#FF159B00" Click="Btn_RegisterU_Click"/>
+        <TextBox x:Name="txtbox_name" HorizontalAlignment="Left" Height="23" Margin="10,240,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="180"/>
+        <xctk:ColorPicker Name="cp_color" Margin="10,297,602,69" DisplayColorAndName="True" AvailableColorsSortingMode="HueSaturationBrightness" />
+        <Button x:Name="btn_OpenMirror" Content="Open Mirror Window" HorizontalAlignment="Left" Margin="309,273,0,0" VerticalAlignment="Top" Width="180" Height="136" Background="#FFFF00E8" FontSize="18" Click="Btn_OpenMirror_Click"/>
+        <Button x:Name="btn_Save" Content="Save" HorizontalAlignment="Left" Margin="204,367,0,0" VerticalAlignment="Top" Width="43" Height="42" Background="#FFFF9700" Click="Btn_Save_Click"/>
+        <Button x:Name="btn_Read" Content="Read" HorizontalAlignment="Left" Margin="252,367,0,0" VerticalAlignment="Top" Width="43" Height="42" Background="#FFFF9700" Click="Btn_Read_Click"/>
+        <ListBox x:Name="list_u" HorizontalAlignment="Left" Height="225" Margin="10,10,0,0" VerticalAlignment="Top" Width="180" SelectionChanged="List_u_SelectionChanged"/>
+        <TextBox x:Name="textbox_loc" HorizontalAlignment="Left" Height="23" Margin="282,10,0,0" TextWrapping="Wrap" Text="Location" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Location:" HorizontalAlignment="Left" Margin="209,9,0,0" VerticalAlignment="Top" Width="61"/>
+
+        <TextBox x:Name="textbox_rssfeed" HorizontalAlignment="Left" Height="23" Margin="282,41,0,0" TextWrapping="Wrap" Text="Rss" VerticalAlignment="Top" Width="489"/>
+        <Label Content="Rssfeed:" HorizontalAlignment="Left" Margin="209,38,0,0" VerticalAlignment="Top" Width="61"/>
+        <Button Content="Change Data" HorizontalAlignment="Left" Margin="209,78,0,0" VerticalAlignment="Top" Width="135" Click="Button_change_data"/>
+
+
+    </Grid>
+</Window>

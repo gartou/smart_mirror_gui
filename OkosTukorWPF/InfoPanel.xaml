@@ -1,0 +1,18 @@
+﻿<Window x:Class="OkosTukorWPF.InfoPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OkosTukorWPF"
+        mc:Ignorable="d"
+        Title="InfoPanel" Height="1920" Width="1200" Background="Black" WindowState="Maximized">
+    <Grid Loaded="Grid_Loaded">
+
+        <Rectangle  x:Name="rec_name" Fill="Red" Margin="44,32,669,1717" Stroke="Black"/>
+        <TextBlock  x:Name="txtblock_name" Margin="44,35,669,1717" TextWrapping="Wrap" Text="Ismeretlen" TextAlignment="Center" FontSize="55"/>
+
+        <TextBlock  x:Name="txtblock_weather" Margin="559,35,42,1717" TextWrapping="Wrap" Text="Weather" TextAlignment="Center" FontSize="55" Foreground="White"/>
+        <TextBlock  x:Name="txtblock_rss" Margin="29,1695,42,25" TextWrapping="Wrap" Text="RSS" TextAlignment="Center" FontSize="45" Foreground="White"/>
+
+    </Grid>
+</Window>
