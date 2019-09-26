@@ -205,7 +205,9 @@ namespace OkosTukorWPF
             infoPanel = new InfoPanel();
             infoPanel.Show();
 
-            //RSS_Feed(users.Find(x => x.Name == "Szabi").rssFeed = textbox_rssfeed.Text);
+            //RSS_Feed(users.Find(x => x.Name == "Szabi").rssFeed);
+            //string url = CurrentUrl.Replace("@LOC@", users.Find(x => x.Name == "Szabi").Location);
+            //infoPanel.txtblock_weather.Text = GetFormattedXml_(url);
 
         }
 
@@ -319,7 +321,7 @@ namespace OkosTukorWPF
 
         private static void RSS_Feed(string rssUri)
         {
-            if (rssUri == "")
+            if (rssUri != "")
             {
 
                 int i = 0;
