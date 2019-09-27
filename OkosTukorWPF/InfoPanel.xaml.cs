@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ZedGraph;
 using Location = Xceed.Wpf.Toolkit.Location;
+using System.Timers;
 
 namespace OkosTukorWPF
 {
@@ -22,6 +23,7 @@ namespace OkosTukorWPF
     /// </summary>
     public partial class InfoPanel : Window
     {
+        System.Timers.Timer t = new System.Timers.Timer();
         public InfoPanel()
         {
             InitializeComponent();
@@ -29,6 +31,9 @@ namespace OkosTukorWPF
             this.WindowState = WindowState.Maximized;
             this.WindowStartupLocation = WindowStartupLocation.Manual;
             this.MaximizeToSecondaryMonitor();
+
+            t.Interval = 1000;
+            t.Elapsed += new ElapsedEventHandler(t_Tick);
         }
 
         public void MaximizeToSecondaryMonitor()
@@ -52,7 +57,53 @@ namespace OkosTukorWPF
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            t.Start();
+        }
+
+        private void t_Tick(object source, ElapsedEventArgs e)
+        {
+            //get current time
+            int hh = DateTime.Now.Hour;
+            int mm = DateTime.Now.Minute;
+            int ss = DateTime.Now.Second;
+
+            //time
+            string time = "";
+
+            //padding leading zero
+            if (hh < 10)
+            {
+                time += "0" + hh;
+            }
+            else
+            {
+                time += hh;
+            }
+            time += ":";
+
+            if (mm < 10)
+            {
+                time += "0" + mm;
+            }
+            else
+            {
+                time += mm;
+            }
+            time += ":";
+
+            if (ss < 10)
+            {
+                time += "0" + ss;
+            }
+            else
+            {
+                time += ss;
+            }
+
+            //update label
+            var dispatcher = this.Dispatcher;
+            if (dispatcher != null)
+                dispatcher.Invoke(() => { txtblock_time.Text = time; });
         }
 
     }

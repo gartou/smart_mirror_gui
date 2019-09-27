@@ -14,7 +14,8 @@
         <TextBlock  x:Name="txtblock_weather" Margin="559,35,42,1717" TextWrapping="Wrap" Text="Weather" TextAlignment="Center" FontSize="55" Foreground="White"/>
         <TextBlock HorizontalAlignment="Left" Margin="251,829,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
         <!--<TextBlock x:Name="txtblock_rss" HorizontalAlignment="Left" Margin="44,548,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="45" Foreground="White" Height="209" Width="1106"/>-->
-        <TextBlock  x:Name="txtblock_rss" Margin="29,1695,42,25" TextWrapping="Wrap" Text="RSS" TextAlignment="Center" FontSize="45" Foreground="White"/>
+        <TextBlock  x:Name="txtblock_rss" Margin="29,1695,282,25" TextWrapping="Wrap" Text="RSS" TextAlignment="Center" FontSize="45" Foreground="White"/>
+        <TextBlock  x:Name="txtblock_time" Margin="910,1695,60,25" TextWrapping="Wrap" Text="time" TextAlignment="Center" FontSize="40" Foreground="White"/>
 
     </Grid>
 </Window>

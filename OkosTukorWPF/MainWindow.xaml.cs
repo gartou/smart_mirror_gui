@@ -325,6 +325,8 @@ namespace OkosTukorWPF
             {
 
                 int i = 0;
+                const int MaxLength = 32;
+                string rss_text = "";
                 try
                 {
                     XmlReader _xmlReader;
@@ -338,7 +340,12 @@ namespace OkosTukorWPF
                     {
                         if (i >= 3 && i < 6)
                         {
-                            infoPanel.txtblock_rss.Text += item.Title.Text + "\n";
+                            if (item.Title.Text.Length > MaxLength)
+                            {
+                                rss_text = item.Title.Text.Substring(0, MaxLength);
+                            }
+
+                            infoPanel.txtblock_rss.Text += rss_text;
                         }
                         else if (i > 6)
                         {
